@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-wrap: break-word;
+}
+
+body, h1, h2, h3, h4, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+.first-paragraph {
+    padding-top: 10px;
+}
+
+#home-container {
+    padding: 0 100px;
+    height: 350px;
+    background: url("img/binding-black-close-up-436779.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#home-navbar {
+    height: 60px;
+    background: #192123;
+    display: flex;
+}
+
+#navbar-logo-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+#navbar-list {
+    padding-left: 100px;
+    flex-grow: 1;
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#navbar-list > li {
+    font-size: 110%;
+    color: #b1c5c5;
+    padding: 0 30px;
+}
+
+#navbar-list > li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#about {
+    height: 400px;
+    display: flex;
+}
+
+#about-front-photo-container {
+    background-color: black;
+    width: 400px;
+}
+
+#about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-container > * {
+    margin: 5px 50px;
+}
+
+#offer {
+    background: url("img/annie-spratt-695484-unsplash.jpg");
+    background-size: cover;
+    padding-top: 150px;
+}
+
+.offer-header {
+    color: white;
+    text-align: center;
+    padding: 20px 150px;
+}
+
+#offer-grid-container {
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    grid-auto-rows: 300px;
+}
+
+.offer-grid-element {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.grid-element-content {
+    flex: 1;
+}
+
+.grid-element-caption {
+    flex: 0.2;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#offer-pursemaking {
+    background: url("img/belt-belts-colors-65280.jpg");
+    background-size: cover;
+}
+
+#offer-shoemaking {
+    background: url("img/terri-bleeker-80576-unsplash.jpg");
+    background-size: cover;
+}
+
+#offer-tools {
+    background: url("img/jose-ramirez-715136-unsplash.jpg");
+    background-size: cover;
+}
+
+#offer-upholstering {
+    background: url("img/design-furniture-leather-914363.jpg");
+    background-size: cover;
+}
+
+#offer-leathers {
+    background: url("img/leather-2981075_1920.jpg");
+    background-size: cover;
+}
+
+#offer-other {
+    background: url("img/dane-deaner-272363-unsplash.jpg");
+    background-size: cover;
+}
