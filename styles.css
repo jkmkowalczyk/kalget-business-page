@@ -108,7 +108,7 @@ nav {
 /*ABOUT*/
 /**/
 #about {
-    padding-top: 200px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
 }
@@ -164,7 +164,8 @@ nav {
 }
 
 #about-description-container {
-    padding-top: 75px;
+    margin-top: 100px;
+    padding: 10px;
     display: flex;
     align-items: center;
 }
@@ -180,6 +181,10 @@ nav {
     border-radius: 10px;
     width: 450px;
     opacity: 0;
+}
+
+#about-description-container {
+    padding: 0 10px;
 }
 
 #about-description1, #about-description2 {
@@ -359,6 +364,7 @@ nav {
 }
 
 #map, #business-card {
+    padding: 30px 20px;
     height: 100%;
     width: 80%;
     border-radius: 20px;
@@ -385,6 +391,7 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 #footer-container {
     display: flex;
 }
@@ -416,9 +423,6 @@ footer {
     flex: 1;
 }
 
-#copyright-container {
-}
-
 #copyright {
     background-color: #03d0d7;
     width: 100%;
@@ -434,4 +438,74 @@ footer {
     cursor: pointer;
     color: #005b9e;
     transition: all 500ms ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    #about {
+        padding-top: 100px;
+    }
+
+    #about-header1 {
+        font-size: 50px;
+    }
+
+    #about-header2 {
+        font-size: 40px;
+    }
+
+    #about-header3 {
+        font-size: 40px;
+    }
+
+    #about-header4 {
+        font-size: 40px;
+    }
+
+    #about-header-image {
+        display: none;
+    }
+
+    #about-description-container {
+    margin-top: 50px;
+    }
+
+    #about-description-image {
+        display: none;
+    }
+
+
+    #offer-header {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+
+    #offer-grid-container {
+        padding: 100px 30px 0;
+        grid-template-columns: 1fr;
+        grid-gap: 75px;
+    }
+
+
+    #contact-header {
+        font-size: 45px;
+    }
+    #contact-content {
+        flex-direction: column;
+    }
+
+
+    #business-card-container {
+        margin-bottom: 100px;
+    }
+
+    #business-card {
+        font-size: 110%;
+    }
+
+
+    #footer {
+        flex-direction: column;
+    }
+
 }
