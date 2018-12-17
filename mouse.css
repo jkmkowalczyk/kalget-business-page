@@ -87,7 +87,7 @@
     margin: -4px 0 0 -4px;
     background: #03d0d7;
     border-radius: 50%;
-    -webkit-animation: ani-mouse 2.5s linear infinite;
-    -moz-animation: ani-mouse 2.5s linear infinite;
-    animation: ani-mouse 2.5s linear infinite;
+    -webkit-animation: ani-mouse 1.5s linear infinite;
+    -moz-animation: ani-mouse 1.5s linear infinite;
+    animation: ani-mouse 1.5s linear infinite;
 }
