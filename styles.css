@@ -252,10 +252,11 @@ nav {
 .offer-grid-element {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
     -moz-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
     box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
+    position: relative;
 }
 
 #offer-pursemaking {
@@ -299,6 +300,7 @@ nav {
 }
 
 .grid-element-caption {
+    font-family: Montserrat, sans-serif;
     flex: 0.15;
     background-color: #03d0d7;
     display: flex;
@@ -306,6 +308,38 @@ nav {
     justify-content: center;
     color: white;
     text-align: center;
+}
+
+.overlay {
+    border-radius: 5px;
+    background-color: black;
+    height: 85%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.offer-grid-element:hover {
+    opacity: 0;
+}
+
+.offer-grid-element:hover .overlay {
+    opacity: 0.6;
+}
+
+.overlay-text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 10px;
+}
+
+.overlay-text ul {
+    list-style-type: none;
 }
 
 /**/
@@ -455,7 +489,7 @@ footer {
     transition: all 500ms ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     section {
         padding: 100px 0;
     }
@@ -514,6 +548,9 @@ footer {
         padding: 100px 30px 0;
         grid-template-columns: 1fr;
         grid-gap: 75px;
+    }
+    .overlay-text {
+        font-size: 75%;
     }
 
     .grid-element-caption p {
