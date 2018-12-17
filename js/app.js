@@ -1,4 +1,5 @@
 const nav = document.getElementsByTagName("nav")[0];
+const aboutHeader = document.getElementById("about-header");
 const aboutHeader1 = document.getElementById("about-header1");
 const aboutHeader2 = document.getElementById("about-header2");
 const aboutHeader3 = document.getElementById("about-header3");
@@ -23,6 +24,7 @@ const footer = document.getElementById("footer");
 
 
 function animate() {
+    aboutHeader.classList.add("show-element");
     aboutHeader1.classList.add("show-element");
     setTimeout(function () {
         aboutHeader2.classList.add("move-element-right")

@@ -15,6 +15,35 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Staatliches" rel="stylesheet">
 </head>
 <body>
+<!--<form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"-->
+<!--action="https://script.google.com/macros/s/AKfycbyv4yzw0ZgJs6wUOcgvwiGGo40jlLh3LdRUa3IdJQ/exec">-->
+<!--<div class="form-elements">-->
+<!--<fieldset class="pure-group">-->
+<!--<label for="name">Name: </label>-->
+<!--<input id="name" name="name" placeholder="What your Mom calls you"/>-->
+<!--</fieldset>-->
+<!--<fieldset class="pure-group">-->
+<!--<label for="message">Message: </label>-->
+<!--<textarea id="message" name="message" rows="10"-->
+<!--placeholder="Tell us what's on your mind..."></textarea>-->
+<!--</fieldset>-->
+<!--<fieldset class="pure-group">-->
+<!--<label for="email"><em>Your</em> Email Address:</label>-->
+<!--<input id="email" name="email" type="email" value=""-->
+<!--required placeholder="your.name@email.com"/>-->
+<!--<span class="email-invalid" style="display:none">-->
+<!--Must be a valid email address</span>-->
+<!--</fieldset>-->
+<!--<button class="button-success pure-button button-xlarge">-->
+<!--<i class="fa fa-paper-plane"></i>&nbsp;Send-->
+<!--</button>-->
+<!--</div>-->
+<!--&lt;!&ndash; Customise the Thankyou Message People See when they submit the form: &ndash;&gt;-->
+<!--<div class="thankyou_message" style="display:none;">-->
+<!--<h2><em>Thanks</em> for contacting us!-->
+<!--We will get back to you soon!</h2>-->
+<!--</div>-->
+<!--</form>-->
 <nav>
     <div id="navbar-logo-container">
         KAL-GET
@@ -27,7 +56,6 @@
         <li>Lokalizacja</li>
     </ul>
 </nav>
-
 <section id="about">
     <div id="about-header-container">
         <div id="about-header">
@@ -73,28 +101,39 @@
     <div id="offer-grid-container">
         <div class="offer-grid-element" id="offer-pursemaking">
             <div class="grid-element-content"></div>
-            <div class="grid-element-caption">Dodatki do torebek, walizek, plecaków, portmonetek i pasków</div>
+            <div class="grid-element-caption">
+                <p>Dodatki do torebek, walizek, plecaków, portmonetek i pasków</p>
+            </div>
         </div>
         <div class="offer-grid-element" id="offer-shoemaking">
             <div class="grid-element-content"></div>
-            <div class="grid-element-caption">Dodatki szewskie</div>
+            <div class="grid-element-caption">
+                <p>Dodatki szewskie</p>
+            </div>
         </div>
         <div class="offer-grid-element" id="offer-tools">
             <div class="grid-element-content"></div>
-            <div class="grid-element-caption">Narzędzia do produkcji kaletniczej, szewskiej, rymarskiej i tapicerskiej
+            <div class="grid-element-caption">
+                <p>Narzędzia do produkcji kaletniczej, szewskiej, rymarskiej i tapicerskiej</p>
             </div>
         </div>
         <div class="offer-grid-element" id="offer-upholstering">
             <div class="grid-element-content"></div>
-            <div class="grid-element-caption">Dodatki tapicerskie</div>
+            <div class="grid-element-caption">
+                <p>Dodatki tapicerskie</p>
+            </div>
         </div>
         <div class="offer-grid-element" id="offer-leathers">
             <div class="grid-element-content"></div>
-            <div class="grid-element-caption">Skóry naturalne</div>
+            <div class="grid-element-caption">
+                <p>Skóry naturalne</p>
+            </div>
         </div>
         <div class="offer-grid-element" id="offer-other">
             <div class="grid-element-content"></div>
-            <div class="grid-element-caption">Pozostała oferta</div>
+            <div class="grid-element-caption">
+                <p>Pozostała oferta</p>
+            </div>
         </div>
     </div>
     <div>
@@ -169,6 +208,7 @@
 </footer>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJnG80u40mLn7oMkJDYY3lApTGyzR26ls&callback=initMap">
 </script>
