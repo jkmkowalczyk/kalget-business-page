@@ -65,9 +65,9 @@ nav {
 }
 
 .nav-shadow {
-    -webkit-box-shadow: 0px 15px 30px 0px rgba(0, 91, 158, 0.46);
-    -moz-box-shadow: 0px 15px 30px 0px rgba(0, 91, 158, 0.46);
-    box-shadow: 0px 15px 30px 0px rgba(0, 91, 158, 0.46);
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 91, 158, 0.46);
+    -moz-box-shadow: 0 15px 30px 0 rgba(0, 91, 158, 0.46);
+    box-shadow: 0 15px 30px 0 rgba(0, 91, 158, 0.46);
     transition: 400ms ease-in-out;
 }
 
@@ -177,9 +177,9 @@ nav {
     height: 500px;
     margin-right: 100px;
     background: url("img/front-photo.jpg");
-    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
-    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
-    box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
+    -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
+    -moz-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
+    box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
     border-radius: 10px;
     width: 450px;
     opacity: 0;
@@ -253,9 +253,9 @@ nav {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
-    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
-    box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
+    -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
+    -moz-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
+    box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
     position: relative;
 }
 
@@ -417,9 +417,9 @@ nav {
     height: 100%;
     width: 80%;
     border-radius: 20px;
-    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
-    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
-    box-shadow: 10px 10px 30px 0px rgba(0, 91, 158, 0.46);
+    -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
+    -moz-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
+    box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
     opacity: 0;
 }
 
