@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     overflow-wrap: break-word;
@@ -21,6 +25,10 @@ a {
 
 section {
     padding: 200px 0;
+}
+
+.active-link {
+    color: #03d0d7;
 }
 
 .show-element {
@@ -96,6 +104,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
 #menu {
