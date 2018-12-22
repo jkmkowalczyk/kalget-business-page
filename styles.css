@@ -61,7 +61,7 @@ nav {
     background: #f0f0f0;
     width: 100%;
     z-index: 10;
-    transition: 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .nav-shadow {
@@ -588,12 +588,17 @@ footer {
 }
 
 .show-menu {
-    display: flex !important;
+    /*display: flex !important;*/
+    right: 5px !important;
 }
 
 @media (max-width: 1024px) {
     section {
         padding: 100px 0;
+    }
+
+    nav {
+        height: 60px;
     }
 
     #navbar-menu-container {
@@ -608,13 +613,12 @@ footer {
 
     #menu-list {
         flex-direction: column;
-
-        top: 55px;
-        right: 10px;
+        top: 60px;
+        right: -263px;
         border: 2px solid #005b9e;
-        display: none;
         z-index: 10;
         background-color: #f0f0f0;
+        transition: all 1000ms ease-in-out;
     }
 
     #menu-list li {
