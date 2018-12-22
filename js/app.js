@@ -21,6 +21,8 @@ const businessCard = document.getElementById("business-card");
 const map = document.getElementById("map");
 const copyright = document.getElementById("copyright");
 const footer = document.getElementById("footer");
+const menu = document.getElementById("menu");
+const menuList = document.getElementById("menu-list");
 
 
 function animate() {
@@ -104,5 +106,18 @@ function onScroll() {
     }
 }
 
+
+function toggleMenu() {
+    if (menu.classList.contains("open")) {
+        menu.classList.remove("open");
+        menuList.classList.remove("show-menu");
+    } else {
+        menu.classList.add("open");
+        menuList.classList.add("show-menu");
+        console.log("add show-menu");
+    }
+}
+
 window.onload = animate;
 window.addEventListener("scroll", onScroll);
+menu.addEventListener("click", toggleMenu);
