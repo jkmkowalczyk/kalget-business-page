@@ -589,6 +589,7 @@ footer {
 
 .show-menu {
     /*display: flex !important;*/
+    transition: all 1000ms ease-in-out;
     right: 5px !important;
 }
 
