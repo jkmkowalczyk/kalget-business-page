@@ -25,12 +25,13 @@ const offerTools = document.getElementById("offer-tools");
 const offerUpholstering = document.getElementById("offer-upholstering");
 const offerLeathers = document.getElementById("offer-leathers");
 const offerOther = document.getElementById("offer-other");
-const locationHeader = document.getElementById("location-header");
 const businessCardContainer = document.getElementById("business-card-container");
 const businessCard = document.getElementById("business-card");
 const contactSection = document.getElementById("contact");
 const locationSection = document.getElementById("location");
 const map = document.getElementById("map");
+const copyright = document.getElementById("copyright");
+const copyrightText = document.getElementById("copyright-text");
 
 // positions
 const siteHeight = document.body.scrollHeight;
@@ -40,6 +41,7 @@ const aboutSectionTop = aboutSection.getBoundingClientRect().top - bodyRectTop;
 const offerSectionTop = offerSection.getBoundingClientRect().top - bodyRectTop;
 const contactSectionTop = contactSection.getBoundingClientRect().top - bodyRectTop;
 const locationSectionTop = locationSection.getBoundingClientRect().top - bodyRectTop;
+const copyrightTop = copyright.getBoundingClientRect().top - bodyRectTop;
 
 
 function setActiveLink() {
@@ -134,20 +136,19 @@ function onScroll() {
         }, 200);
     }
 
-    const contactHeaderTop = locationHeader.getBoundingClientRect().top - bodyRectTop;
-    if (windowPosition > contactHeaderTop) {
-        locationHeader.classList.add("move-element-up");
-        setTimeout(function () {
-            businessCard.classList.add("show-element")
-        }, 200);
+    if (windowPosition > locationSectionTop) {
+        businessCard.classList.add("show-element");
         setTimeout(function () {
             map.classList.add("show-element")
-        }, 400);
+        }, 200);
     }
 
-    const businessCardContainerTop = businessCardContainer.getBoundingClientRect().top - bodyRectTop;
-    if (windowPosition > businessCardContainerTop) {
+    console.log(windowPosition > copyrightTop);
+    if (windowPosition > copyrightTop) {
+        copyrightText.classList.add("show-element");
     }
+
+
 }
 
 function toggleMenu() {
