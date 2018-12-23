@@ -153,8 +153,7 @@ function onScroll() {
 
 function toggleMenu() {
     if (menu.classList.contains("open")) {
-        menu.classList.remove("open");
-        menuList.classList.remove("show-menu");
+        closeMenu();
     } else {
         menu.classList.add("open");
         menuList.classList.add("show-menu");
@@ -167,23 +166,33 @@ menu.addEventListener("click", toggleMenu);
 
 
 function scrollHome() {
+    closeMenu();
     window.scrollTo(0, 0);
 }
 
 function scrollAbout() {
+    closeMenu();
     window.scrollTo(0, aboutSectionTop);
 }
 
 function scrollOffer() {
+    closeMenu();
     window.scrollTo(0, offerSectionTop);
 }
 
 function scrollContact() {
+    closeMenu();
     window.scrollTo(0, contactSectionTop);
 }
 
 function scrollLocation() {
+    closeMenu();
     window.scrollTo(0, locationSectionTop);
+}
+
+function closeMenu() {
+    menu.classList.remove("open");
+    menuList.classList.remove("show-menu");
 }
 
 
