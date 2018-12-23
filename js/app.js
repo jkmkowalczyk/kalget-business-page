@@ -30,7 +30,7 @@ const businessCard = document.getElementById("business-card");
 const contactSection = document.getElementById("contact");
 const locationSection = document.getElementById("location");
 const map = document.getElementById("map");
-const copyright = document.getElementById("copyright");
+const footerSection = document.getElementById("footer");
 const copyrightText = document.getElementById("copyright-text");
 
 // positions
@@ -41,7 +41,7 @@ const aboutSectionTop = aboutSection.getBoundingClientRect().top - bodyRectTop;
 const offerSectionTop = offerSection.getBoundingClientRect().top - bodyRectTop;
 const contactSectionTop = contactSection.getBoundingClientRect().top - bodyRectTop;
 const locationSectionTop = locationSection.getBoundingClientRect().top - bodyRectTop;
-const copyrightTop = copyright.getBoundingClientRect().top - bodyRectTop;
+const copyrightTop = footerSection.getBoundingClientRect().top - bodyRectTop;
 
 
 function setActiveLink() {
