@@ -852,6 +852,7 @@ footer {
     }
 
     .thank-you-msg {
+        line-height: 24px;
         font-size: 80%;
     }
 
