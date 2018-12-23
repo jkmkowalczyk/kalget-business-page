@@ -1,38 +1,38 @@
-(function() {
+(function () {
     function validEmail(email) {
-        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
         return re.test(email);
     }
 
     // get all data in form and return object
     function getFormData(form) {
-        var elements = form.elements;
+        const elements = form.elements;
 
-        var fields = Object.keys(elements).filter(function(k) {
+        const fields = Object.keys(elements).filter(function (k) {
             return (elements[k].name !== "honeypot");
-        }).map(function(k) {
-            if(elements[k].name !== undefined) {
+        }).map(function (k) {
+            if (elements[k].name !== undefined) {
                 return elements[k].name;
                 // special case for Edge's html collection
-            }else if(elements[k].length > 0){
+            } else if (elements[k].length > 0) {
                 return elements[k].item(0).name;
             }
-        }).filter(function(item, pos, self) {
-            return self.indexOf(item) == pos && item;
+        }).filter(function (item, pos, self) {
+            return self.indexOf(item) === pos && item;
         });
 
-        var formData = {};
-        fields.forEach(function(name){
-            var element = elements[name];
+        const formData = {};
+        fields.forEach(function (name) {
+            const element = elements[name];
 
             // singular form elements just have one value
             formData[name] = element.value;
 
             // when our element has multiple items, get their values
             if (element.length) {
-                var data = [];
-                for (var i = 0; i < element.length; i++) {
-                    var item = element.item(i);
+                const data = [];
+                for (let i = 0; i < element.length; i++) {
+                    let item = element.item(i);
                     if (item.checked || item.selected) {
                         data.push(item.value);
                     }
@@ -50,38 +50,39 @@
         return formData;
     }
 
-    function handleFormSubmit(event) {  // handles form submit without any jquery
+    function handleFormSubmit(event) {
         event.preventDefault();           // we are submitting via xhr below
-        var form = event.target;
-        var data = getFormData(form);         // get the values submitted in the form
+        const form = event.target;
+        const data = getFormData(form);         // get the values submitted in the form
 
-        if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
-            var invalidEmail = form.querySelector(".email-invalid");
+        if (data.email && !validEmail(data.email)) {   // if email is not valid show error
+            const invalidEmail = form.querySelector(".email-invalid");
             if (invalidEmail) {
                 invalidEmail.style.display = "block";
                 return false;
             }
         } else {
             disableAllButtons(form);
-            var url = form.action;
-            var xhr = new XMLHttpRequest();
+            const url = form.action;
+            const xhr = new XMLHttpRequest();
             xhr.open('POST', url);
             // xhr.withCredentials = true;
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = function () {
                 console.log(xhr.status, xhr.statusText);
                 console.log(xhr.responseText);
-                var formElements = form.querySelector(".form-elements")
-                if (formElements) {
-                    formElements.style.display = "none"; // hide form
+                const submitButton = form.querySelector("#submit-button");
+                console.log(submitButton);
+                if (submitButton) {
+                    submitButton.style.display = "none"; // hide button
                 }
-                var thankYouMessage = form.querySelector(".thankyou_message");
+                const thankYouMessage = form.querySelector(".thank-you-msg");
                 if (thankYouMessage) {
                     thankYouMessage.style.display = "block";
                 }
             };
             // url encode form data for sending as post data
-            var encoded = Object.keys(data).map(function(k) {
+            const encoded = Object.keys(data).map(function (k) {
                 return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
             }).join('&');
             xhr.send(encoded);
@@ -89,18 +90,18 @@
     }
 
     function loaded() {
-        console.log("Contact form submission handler loaded successfully.");
         // bind to the submit event of our form
-        var forms = document.querySelectorAll("form.gform");
-        for (var i = 0; i < forms.length; i++) {
+        const forms = document.querySelectorAll("form.gform");
+        for (let i = 0; i < forms.length; i++) {
             forms[i].addEventListener("submit", handleFormSubmit, false);
         }
     }
+
     document.addEventListener("DOMContentLoaded", loaded, false);
 
     function disableAllButtons(form) {
-        var buttons = form.querySelectorAll("button");
-        for (var i = 0; i < buttons.length; i++) {
+        const buttons = form.querySelectorAll("#submit-button");
+        for (let i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
         }
     }

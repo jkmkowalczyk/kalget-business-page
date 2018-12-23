@@ -1,3 +1,19 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -13,6 +29,10 @@ body {
 body, h1, h2, h3, h4, p, ul, li, a {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: Montserrat, sans-serif;
 }
 
 p {
@@ -84,12 +104,16 @@ nav {
     transition: 400ms ease-in-out;
 }
 
+#navbar-logo-text {
+    margin-right: 20px;
+}
+
 #navbar-logo-container {
     font-family: Montserrat, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 200px;
+    padding: 0 40px
 }
 
 #navbar-logo {
@@ -97,7 +121,6 @@ nav {
     height: 40px;
     background: url("img/logo.jpeg");
     background-size: cover;
-    margin-left: 20px;
     border-radius: 5px;
     -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
     -moz-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
@@ -340,6 +363,7 @@ nav {
 /**/
 #offer {
     background-color: #f1f1f1;
+    padding-bottom: 300px;
 }
 
 #offer-header {
@@ -464,11 +488,136 @@ nav {
 /**/
 #contact {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url("img/contact-bg.jpg");
+    background-size: cover;
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+#contact h1 {
+    margin-bottom: 50px;
+}
+
+#form {
+    font-size: 120%;
+    padding: 50px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+}
+
+textarea {
+    resize: vertical;
+}
+
+#form-elements {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fieldset {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+    border-bottom: 1px solid white;
+}
+
+input, textarea {
+    font-size: 120%;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+input[type=button] {
+    font-family: Montserrat, sans-serif;
+}
+
+.thank-you-msg, .button {
+    margin-top: 50px;
+}
+
+.thank-you-msg {
+    line-height: 48px;
+}
+
+.button {
+    border-radius: 4px;
+    background: transparent;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/*LOCATION*/
+/**/
+#location {
+    display: flex;
     flex-direction: column;
     height: 900px;
 }
 
-#contact-header {
+#location-header {
     text-align: center;
     font-family: 'Archivo Black', sans-serif;
     font-size: 55px;
@@ -479,7 +628,7 @@ nav {
     top: 100px;
 }
 
-#contact-content {
+#location-content {
     display: flex;
     flex: 1;
 }
@@ -533,10 +682,6 @@ nav {
     -moz-box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
     box-shadow: 10px 10px 30px 0 rgba(0, 91, 158, 0.46);
     opacity: 0;
-}
-
-#map:hover, #business-card:hover {
-
 }
 
 /**/
@@ -608,6 +753,10 @@ footer {
 
     nav {
         height: 60px;
+    }
+
+    #navbar-logo-text {
+        display: none;
     }
 
     #navbar-menu-container {
@@ -694,11 +843,11 @@ footer {
         font-size: 90%;
     }
 
-    #contact-header {
+    #location-header {
         font-size: 45px;
     }
 
-    #contact-content {
+    #location-content {
         flex-direction: column;
     }
 

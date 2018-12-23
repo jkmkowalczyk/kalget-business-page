@@ -1,10 +1,12 @@
 // elements
 const nav = document.getElementsByTagName("nav")[0];
+const menu = document.getElementById("menu");
+const menuList = document.getElementById("menu-list");
 const homeLink = document.getElementById("home-link");
 const aboutLink = document.getElementById("about-link");
 const offerLink = document.getElementById("offer-link");
 const contactLink = document.getElementById("contact-link");
-const localisationLink = document.getElementById("localisation-link");
+const locationLink = document.getElementById("location-link");
 const aboutHeader = document.getElementById("about-header");
 const aboutHeader1 = document.getElementById("about-header1");
 const aboutHeader2 = document.getElementById("about-header2");
@@ -23,24 +25,21 @@ const offerTools = document.getElementById("offer-tools");
 const offerUpholstering = document.getElementById("offer-upholstering");
 const offerLeathers = document.getElementById("offer-leathers");
 const offerOther = document.getElementById("offer-other");
-const contactHeader = document.getElementById("contact-header");
+const locationHeader = document.getElementById("location-header");
 const businessCardContainer = document.getElementById("business-card-container");
 const businessCard = document.getElementById("business-card");
 const contactSection = document.getElementById("contact");
+const locationSection = document.getElementById("location");
 const map = document.getElementById("map");
-const copyright = document.getElementById("copyright");
-const footer = document.getElementById("footer");
-const menu = document.getElementById("menu");
-const menuList = document.getElementById("menu-list");
 
 // positions
 const siteHeight = document.body.scrollHeight;
 const clientHeight = document.documentElement.clientHeight;
-
 const bodyRectTop = document.body.getBoundingClientRect().top;
 const aboutSectionTop = aboutSection.getBoundingClientRect().top - bodyRectTop;
 const offerSectionTop = offerSection.getBoundingClientRect().top - bodyRectTop;
 const contactSectionTop = contactSection.getBoundingClientRect().top - bodyRectTop;
+const locationSectionTop = locationSection.getBoundingClientRect().top - bodyRectTop;
 
 
 function setActiveLink() {
@@ -62,10 +61,16 @@ function setActiveLink() {
         offerLink.classList.remove("active-link");
     }
 
-    if (scroll >= contactSectionTop) {
+    if (scroll >= contactSectionTop && scroll < locationSectionTop) {
         contactLink.classList.add("active-link");
     } else {
         contactLink.classList.remove("active-link");
+    }
+
+    if (scroll >= locationSectionTop) {
+        locationLink.classList.add("active-link");
+    } else {
+        locationLink.classList.remove("active-link");
     }
 }
 
@@ -129,9 +134,9 @@ function onScroll() {
         }, 200);
     }
 
-    const contactHeaderTop = contactHeader.getBoundingClientRect().top - bodyRectTop;
+    const contactHeaderTop = locationHeader.getBoundingClientRect().top - bodyRectTop;
     if (windowPosition > contactHeaderTop) {
-        contactHeader.classList.add("move-element-up");
+        locationHeader.classList.add("move-element-up");
         setTimeout(function () {
             businessCard.classList.add("show-element")
         }, 200);
@@ -155,7 +160,6 @@ function toggleMenu() {
     }
 }
 
-window.addEventListener("load", setActiveLink);
 window.addEventListener("load", onScroll);
 window.addEventListener("scroll", onScroll);
 menu.addEventListener("click", toggleMenu);
@@ -177,7 +181,13 @@ function scrollContact() {
     window.scrollTo(0, contactSectionTop);
 }
 
+function scrollLocation() {
+    window.scrollTo(0, locationSectionTop);
+}
+
+
 homeLink.addEventListener("click", scrollHome);
 aboutLink.addEventListener("click", scrollAbout);
 offerLink.addEventListener("click", scrollOffer);
 contactLink.addEventListener("click", scrollContact);
+locationLink.addEventListener("click", scrollLocation);

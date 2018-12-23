@@ -15,35 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Staatliches" rel="stylesheet">
 </head>
 <body>
-<!--<form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"-->
-<!--action="https://script.google.com/macros/s/AKfycbyv4yzw0ZgJs6wUOcgvwiGGo40jlLh3LdRUa3IdJQ/exec">-->
-<!--<div class="form-elements">-->
-<!--<fieldset class="pure-group">-->
-<!--<label for="name">Name: </label>-->
-<!--<input id="name" name="name" placeholder="What your Mom calls you"/>-->
-<!--</fieldset>-->
-<!--<fieldset class="pure-group">-->
-<!--<label for="message">Message: </label>-->
-<!--<textarea id="message" name="message" rows="10"-->
-<!--placeholder="Tell us what's on your mind..."></textarea>-->
-<!--</fieldset>-->
-<!--<fieldset class="pure-group">-->
-<!--<label for="email"><em>Your</em> Email Address:</label>-->
-<!--<input id="email" name="email" type="email" value=""-->
-<!--required placeholder="your.name@email.com"/>-->
-<!--<span class="email-invalid" style="display:none">-->
-<!--Must be a valid email address</span>-->
-<!--</fieldset>-->
-<!--<button class="button-success pure-button button-xlarge">-->
-<!--<i class="fa fa-paper-plane"></i>&nbsp;Send-->
-<!--</button>-->
-<!--</div>-->
-<!--&lt;!&ndash; Customise the Thankyou Message People See when they submit the form: &ndash;&gt;-->
-<!--<div class="thankyou_message" style="display:none;">-->
-<!--<h2><em>Thanks</em> for contacting us!-->
-<!--We will get back to you soon!</h2>-->
-<!--</div>-->
-<!--</form>-->
 <nav>
     <div id="navbar-logo-container">
         <p id="navbar-logo-text">KAL-GET</p>
@@ -61,7 +32,7 @@
             <li id="about-link">O nas</li>
             <li id="offer-link">Oferta</li>
             <li id="contact-link">Kontakt</li>
-            <li id="localisation-link">Lokalizacja</li>
+            <li id="location-link">Lokalizacja</li>
         </ul>
     </div>
 </nav>
@@ -250,8 +221,36 @@
 </section>
 
 <section id="contact">
-    <h2 id="contact-header">Kontakt</h2>
-    <div id="contact-content">
+    <h1>Formularz kontaktowy</h1>
+    <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+          action="https://script.google.com/macros/s/AKfycbyv4yzw0ZgJs6wUOcgvwiGGo40jlLh3LdRUa3IdJQ/exec" id="form">
+        <div id="form-elements">
+            <div class="fieldset">
+                <label for="name">Imię i nazwisko:</label>
+                <input id="name" name="name"/>
+            </div>
+            <div class="fieldset">
+                <label for="email">Adres email:</label>
+                <input id="email" name="email" type="email" required/>
+                <span class="email-invalid" style="display:none">Must be a valid email address</span>
+            </div>
+            <div class="fieldset">
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button id="submit-button" class="button"><span>Wyślij </span></button>
+            <p class="thank-you-msg" style="display:none;">
+                Dziękujemy za wiadomość.
+            </p>
+        </div>
+
+
+    </form>
+</section>
+
+<section id="location">
+    <h2 id="location-header">Lokalizacja</h2>
+    <div id="location-content">
         <div id="business-card-container">
             <div id="business-card">
                 <div id="business-card-home" class="business-card-element">
@@ -276,6 +275,7 @@
         </div>
     </div>
 </section>
+
 
 <footer>
     <div id="footer-container">
@@ -311,7 +311,7 @@
 </footer>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
-<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+<script data-cfasync="false" type="text/javascript" src="js/form.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJnG80u40mLn7oMkJDYY3lApTGyzR26ls&callback=initMap">
 </script>
