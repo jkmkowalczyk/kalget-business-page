@@ -552,6 +552,14 @@ textarea:focus, input:focus {
     outline: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
 input[type=button] {
     font-family: Montserrat, sans-serif;
 }
@@ -841,6 +849,10 @@ footer {
 
     .grid-element-caption p {
         font-size: 90%;
+    }
+
+    .thank-you-msg {
+        font-size: 80%;
     }
 
     #location-header {
